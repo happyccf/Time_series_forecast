@@ -195,42 +195,42 @@ https://www.jianshu.com/p/48e82dbb142b
 ## 3 代码API介绍  
 ### 3.1 数据处理   
 data.process.py       
-方法 | 作用 | 备注 |  
---- | --- | --- |   
-draw_acf_pacf() | 自相关和偏相关作图 | 查看周期，是否为WN等 |   
-decompose() | 时序分解 | 查看趋势、周期等性质，可以分别来时序预测 |     
+| 方法 | 作用 | 备注 |  
+| --- | --- | --- |   
+| draw_acf_pacf() | 自相关和偏相关作图 | 查看周期，是否为WN等 |   
+| decompose() | 时序分解 | 查看趋势、周期等性质，可以分别来时序预测 |     
 
 ### 3.2 传统时序预测算法  
 simple_predict_method.py  
-方法 | 作用 | 备注 |    
----|---|---|    
-ses_method() | 简单加权指数平滑预测 | 也可以调用SimpleExpSmoothing方法|    
-holt_method() | 非季节性+趋势的holt预测 | \ |   
-holt_winter_method() | 季节性+趋势性的holt-winter预测 | \ |   
-autoarima_method() | 自动选参的arima模型 | 要下载pyramid库 |    
-sarimax_method() | 季节性SARIMAX模型 | 可以使用GridSearch查找参数 |   
-ETS() | \ | 无python实现，可以调用R包 |   
+| 方法 | 作用 | 备注 |    
+|---|---|---|    
+| ses_method() | 简单加权指数平滑预测 | 也可以调用SimpleExpSmoothing方法|    
+| holt_method() | 非季节性+趋势的holt预测 | \ |   
+| holt_winter_method() | 季节性+趋势性的holt-winter预测 | \ |   
+| autoarima_method() | 自动选参的arima模型 | 要下载pyramid库 |    
+| sarimax_method() | 季节性SARIMAX模型 | 可以使用GridSearch查找参数 |   
+| ETS() | \ | 无python实现，可以调用R包 |   
 
 ### 3.3 机器学习时序预测算法    
 ml_predict_method.py  
-方法 | 作用 | 备注 |   
----|---|---|    
-rf_method() | 随机森林方法 | 这里使用了默认参数 |   
-gbdt_method() | GBDT方法 | 具体寻参等可类似于xgboost_algorithm.py |   
-gbm_method() | lightgbm方法 | 具体寻参等可类似于xgboost_algorithm.py |    
+| 方法 | 作用 | 备注 |   
+| --- | --- | --- |    
+| rf_method() | 随机森林方法 | 这里使用了默认参数 |   
+| gbdt_method() | GBDT方法 | 具体寻参等可类似于xgboost_algorithm.py |   
+| gbm_method() | lightgbm方法 | 具体寻参等可类似于xgboost_algorithm.py |    
 
 xgboost_algorithm.py    
-方法 | 作用 | 备注 |     
----|---|---|     
-xgb_model() | xgb模型的寻参和训练 | ml方法的寻参都可以使用GridSearch |   
-xgb_predict() | xgb模型预测 | \ |      
+| 方法 | 作用 | 备注 |     
+| ---|---|---|     
+| xgb_model() | xgb模型的寻参和训练 | ml方法的寻参都可以使用GridSearch |   
+| xgb_predict() | xgb模型预测 | \ |      
 
 ### 3.4 深度学习时序预测算法    
 seq2seq_algorithm.py    
-方法 | 作用 | 备注 |     
----|---|---|     
-s2s_model() | seq2seq模型的训练过程 | 使用的是attention模型，需要配置网络结构|     
-s2s_predict() | seq2seq模型预测 | \ |      
+| 方法 | 作用 | 备注 |     
+|---|---|---|     
+| s2s_model() | seq2seq模型的训练过程 | 使用的是attention模型，需要配置网络结构|     
+| s2s_predict() | seq2seq模型预测 | \ |      
 
 ## Reference   
 更多补充内容可参考 tsforecast.ppt by wangjun  
